@@ -1,8 +1,8 @@
 var phoneApp = angular.module("phoneApp", []);
 
-phoneApp.controller("PhoneCtrl", function ($scope)
+phoneApp.controller("PhoneCtrl", function ()
 {
-    $scope.phoneBook = [
+    this.phoneBook = [
         {name: "Warner Bridges", number: "+1 (914) 451-3055"},
         {name: "Bauer Spencer", number: "+1 (942) 551-2179"},
         {name: "Good Burnett", number: "+1 (820) 450-3124"},
@@ -10,16 +10,16 @@ phoneApp.controller("PhoneCtrl", function ($scope)
         {name: "Candace Gordon", number: "+1 (932) 408-2012"}
     ];
 
-    $scope.selectedPerson = $scope.phoneBook[0];
+    this.selectedPerson = this.phoneBook[0];
 
-    $scope.phone = false;
+    this.phone = false;
 
-    $scope.showPhone = function ()
+    this.showPhone = function ()
     {
-        $scope.phone = $scope.phone ? false : true;
+        this.phone = this.phone ? false : true;
     };
 
-    $scope.call = function ()
+    this.call = function ()
     {
         alert("ring ding ding ding...");
     }

@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body ng-app="phoneApp" ng-controller="PhoneCtrl">
+<body ng-app="phoneApp" ng-controller="PhoneCtrl as phone">
 <div class="container">
     <div class="page-header">
         <h1>Call Me
@@ -15,19 +15,19 @@
     <div class="col-md-offset-4">
         <div class="form-group col-md-3">
             <select class="form-control" ng-model="selectedPerson.name">
-                <option ng-repeat="person in phoneBook">{{person.name}}</option>
+                <option ng-repeat="person in phone.phoneBook">{{person.name}}</option>
             </select>
         </div>
         <div class="form-group">
-            <button class="btn btn-default" ng-click="showPhone()">
-                <strong ng-hide="phone">Give me the phone!</strong>
-                <strong ng-show="phone">I don't need a phone.</strong>
+            <button class="btn btn-default" ng-click="phone.showPhone()">
+                <strong ng-hide="phone.phone">Give me the phone!</strong>
+                <strong ng-show="phone.phone">I don't need a phone.</strong>
             </button>
         </div>
     </div>
-    <div class="text-center" ng-click="call()">
-        <div class="form-group btn btn-default" ng-show="phone">
-            <p>{{selectedPerson.number}}</p>
+    <div class="text-center" ng-click="phone.call()">
+        <div class="form-group btn btn-default" ng-show="phone.phone">
+            <p>{{phone.selectedPerson.number}}</p>
             <img src="assets/phone.png">
         </div>
     </div>
