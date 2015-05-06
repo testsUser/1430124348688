@@ -2,3 +2,30 @@
     width: 300px;
     height: 300px;
 }
+.dwa {
+    -webkit-transition:  1s;
+    -moz-transition:  1s;
+    -ms-transition:  1s;
+    -o-transition:  1s;
+    transition:  1s;
+}
+
+.dwa.ng-enter {
+    width: 150px;
+    height: 150px;
+}
+
+.dwa.ng-enter-active {
+    width: 300px;
+    height: 300px;
+}
+
+.dwa.ng-leave {
+    width: 300px;
+    height: 300px;
+}
+
+.dwa.ng-leave-active {
+    width: 150px;
+    height: 150px;
+}

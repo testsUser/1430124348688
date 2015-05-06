@@ -2,3 +2,26 @@
     width: 300px;
     height: 300px;
 }
+.jdn {
+    -webkit-transition: linear 2s;
+    -moz-transition: linear 2s;
+    -ms-transition: linear 2s;
+    -o-transition: linear 2s;
+    transition: linear 2s;
+}
+
+.jdn.ng-enter {
+    opacity: 0;
+}
+
+.jdn.ng-enter-active {
+    opacity: 1;
+}
+
+.jdn.ng-leave {
+    opacity: 1;
+}
+
+.jdn.ng-leave-active {
+    opacity: 0;
+}
